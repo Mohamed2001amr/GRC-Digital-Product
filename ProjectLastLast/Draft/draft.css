@@ -1,0 +1,43 @@
+/* Reset all content elements to disabled by default */
+.content input {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Active section with enabled inputs */
+.active input {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Style for the sections */
+.section {
+  margin-bottom: 20px;
+}
+
+div.active{
+  background-color: red;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+input[type="text"], input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}

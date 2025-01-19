@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch and Show Alert Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .attachment-preview {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .attachment-preview input {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        .button {
+            padding: 8px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        #alertBox {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            background-color: #f8d7da;
+            color: #842029;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attachment Preview Example</h1>
+
+    <!-- Alert Box -->
+    <div id="alertBox"></div>
+
+    <!-- Example rows -->
+    <div class="attachment-preview">
+        <label for="fileInput1">File 1:</label>
+        <input type="text" id="fileInput1" placeholder="Enter file name">
+    </div>
+    <div class="attachment-preview">
+        <label for="fileInput2">File 2:</label>
+        <input type="text" id="fileInput2" placeholder="Enter file name">
+    </div>
+
+    <!-- Button -->
+    <button class="button" onclick="addNewFileRow(this)">Add New File</button>
+
+    <!-- Hidden file input -->
+    <input type="file" id="fileUpload" style="display: none;">
+
+    <script>
+        // دالة لعرض التنبيه
+        function showAlert(message) {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.innerText = message;
+            alertBox.style.display = 'block';
+        }
+
+        // دالة للتحقق من الحقول المطلوبة
+        function validateFields(row) {
+            const input = row.querySelector('input[type="text"]');
+            return input && input.value.trim() !== '';
+        }
+
+        // دالة لجلب الرسالة من الـ API مع اللغة
+        function fetchAndShowAlert(messageId, language) {
+            fetch(`http://localhost/APIGateWay/APIConfig/Message.php?MessageId=${messageId}&lang=${language}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json(); // تحويل الرد إلى JSON
+            })
+            .then(data => {
+                if (data.MessageName) {
+                    showAlert(data.MessageName); // عرض الرسالة باستخدام showAlert
+                } else {
+                    showAlert('Message not found'); // رسالة افتراضية عند عدم العثور على الرسالة
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching message:', error);
+                showAlert('An error occurred while fetching the message'); // عرض رسالة خطأ
+            });
+        }
+
+        // الدالة الرئيسية لإضافة صف جديد
+        function addNewFileRow(button) {
+            const allRows = document.querySelectorAll(".attachment-preview");
+
+            // تحقق من الحقول المطلوبة في كل صف
+            for (const row of allRows) {
+                if (!validateFields(row)) {
+                    // استدعاء fetchAndShowAlert لعرض الرسالة
+                    fetchAndShowAlert(12, 'EN'); // استبدل 12 بـ MessageId المناسب
+                    return; // توقف إذا لم يتم ملء أحد الصفوف
+                }
+            }
+
+            // إذا تم التحقق من جميع الحقول، افتح نافذة اختيار الملفات
+            const fileUploadElement = document.getElementById("fileUpload");
+            if (fileUploadElement) {
+                fileUploadElement.click();
+            } else {
+                console.error("Element with ID 'fileUpload' not found.");
+                fetchAndShowAlert(13, 'EN'); // عرض رسالة خطأ إذا لم يتم العثور على العنصر
+            }
+        }
+    </script>
+</body>
+</html>
