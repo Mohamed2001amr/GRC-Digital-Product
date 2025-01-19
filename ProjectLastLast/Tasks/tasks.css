@@ -1,0 +1,1018 @@
+/*Start General style */
+body {background-color: #f2f2f2; font-size: 15px; margin: 0; padding: 0;} 
+
+.container {width: 100%; margin: 0 auto;}
+
+a {color: #000000; text-decoration: none; font-weight: bolder;}
+
+button {background-color: #e7e6e6; color: #c2bfbf; border: none; cursor: pointer; border-radius: 10%; width: 8%; padding: .7% 0;}
+
+button:hover{background-color: #bfbfbf; color: #000006; font-weight: bolder;}
+
+table { width: 100%;  border-collapse: collapse; }
+
+table thead{display: contents;}
+
+table, th, td { border: 1px solid #ddd; }
+
+th, td { padding: 5.6px 6px; text-align: left; color: gray;}
+
+th { background-color: #bfbfbf; }
+
+td {cursor: pointer;}
+/*End General style */
+
+/*Start header style */
+header {display: list-item; color: white; height: 45px; padding: 0; margin: 0; margin-bottom:2.4%;}
+
+header img.logo {width: 80px; float: left; border-radius: 50%; height: 70px; margin: 4px 0 0 5px;}
+
+nav.header-tabs {width: 88.8%; justify-content: center; float: left;}
+
+nav.header-tabs ul{list-style-type: none; padding: 0; margin-left: 5px; display: inline-flex;}
+
+.dropdown-user ul{list-style-type: none; padding: 0; margin-left: 5px;}
+
+nav.header-tabs ul li,
+.dropdown-content-user ul li { margin: 2px 0px 5px 0px ;}
+
+nav.header-tabs ul li a,
+.dropdown-user ul li a {
+    text-decoration: none;
+    color: #6d6b6b;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav.header-tabs ul li a:hover,
+.dropdown-user ul li a:hover {background-color: #bfbfbf; color: #000006; font-weight: bolder;}
+
+header .header-tabs .not{width: 1.4%; float: right; margin-top: 1.4%; margin-right: -3.6%; cursor: pointer;}
+
+header img.bar{width: 70%; cursor: pointer; float: right; margin: 34% 0 0 0; left: 200%; position: absolute;}
+
+.my-icon{width: 2%; float: right; margin: -39.3% -2.8% 0 0;}
+
+.my-icon img{width: 60%; display: block; margin-bottom: 31%; cursor: pointer;}
+
+.submit-form{width: 2%; float: right; margin-top: -3.5%; display: grid; margin-right: -2.5%;}
+
+.submit-form button.new,
+.submit-form button.delete{width: 60%; padding: 0; background-color: unset; margin: .3% 0 25.5% 0; float: right;}
+
+.submit-form button#deleteButton{margin-right: -1%; cursor: not-allowed;}
+
+.submit-form button.enabled {opacity: 100% !important; cursor: pointer !important;}
+
+.submit-form button{display: block;}
+
+.dropdown,.dropdown-user{position: relative; float: right; margin: .8%; width: 2%;}
+
+.dropdown-user{margin-top: 1%;}
+
+.dropdown .dropdown-content-li {display: block;}
+  
+.dropdown-content,
+.dropdown-content-user{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 115px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -180%;
+    margin-top: 89%;
+    text-align: center;
+    border-radius: 15%;
+}
+
+.dropdown-content-user{margin-left: -290%; margin-top: 86%;}
+
+.dropdown-content-user .lang-sett{display: none; margin-right: 7%; background-color: #dcdada;}
+
+.dropdown-content-user .lang:hover .lang-sett{display: block;}
+  
+.dropdown:hover .dropdown-content,.dropdown-user:hover .dropdown-content-user{display: block;}
+
+header img.arrow{width: 70%; cursor: pointer; float: right; margin: 4% 1.5% 0 0; border-radius: 50%;}
+/*End header style */
+
+/*Start main-content 2 style */
+.main-content2{
+    width: 93%;
+    background-color: #f2f2f2;
+    scrollbar-color: #8c8a8a #e0dcdc;
+    height: 600px;
+    margin-top: -1.6%;
+    margin-right: 2.7%;
+    float: right;
+}
+
+.table table tr td.task-identify span{width: 100%; display: inline-block;}
+
+table button.table-icon{width: 5%; margin: 0 1.2%; float: right; background: unset; display: none;}
+
+table button.table-icon img{ width: 100%;}
+
+.main-content2 .table tbody tr:hover td.id-task,
+.main-content2 .table tbody tr:hover td.task-identify,
+.main-content2 .table tbody tr:hover td.statue-task,
+.main-content2 .table tbody tr:hover td.date-task,
+.main-content2 .table tbody tr:hover td.type-task{background-color: #eeeeee; color: #000000; font-weight: 700;}
+
+.main-content2 .table .select-task,.id-task{width: 3%;}
+.main-content2 .table .select-task{padding: 3px; text-align: center;}
+.main-content2 .table .select-task input{padding: 0; margin-top: 5px;}
+.main-content2 .table .type-task,.date-task{width: 6%;}
+.main-content2 .table .statue-task{width: 9%;}
+
+.table table tr:hover td .text{display: none;}
+
+.table tr:hover .table-icon{margin-right: 70%; width: 27%;}
+
+table tr:hover button.table-icon,
+.table tr:hover .table-icon img{display: block;}
+
+.table .table-icon{width: 2%; display: inline-flex; float: right; margin-right: 6%;}
+
+.table .table-icon img{margin-left: 30%; display: none;}
+
+.main-content2 .table-header{background-color: #f2f2f2; margin-top: -1.5%;}
+
+.main-content2 .table-header .dropdown-button{background-color: unset;}
+
+.main-content2 .table-header .dropdownListFilter {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content2 .table-header .dropdownListFilter li {display: block; padding: 8px; text-decoration: none; color: #333;}
+
+.main-content2 .table-header .header-content{
+    color: #232323;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 0% 1% .5% 2%;
+}
+
+.main-content2 .table-header .header-name{width: 69.2%; margin-left: 0;}
+.main-content2 .table-header .header-status{width: 7%; margin-left: 1.8%;}
+.main-content2 .table-header .header-date{width: 5.6%; margin-left: .6%; margin-right: 0;}
+.main-content2 .table-header .header-type{margin-left: -.1% !important;}
+.main-content2 .table-header .header-id{margin-left: .4% !important;}
+
+.main-content2 .table{
+    background-color: white;
+    color: gray;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    height: 93.5%;
+}
+/*End main-content 2 style */
+
+/* main-content 3 style */
+.main-content3{width: 81.3%;  margin: -2% 0 2.5% 16.7%;}
+
+.serachcon{width: 78%; margin-left: -1%; padding: 0 0 0 5px; display: inline-block;}
+
+.serach{width: 2%; float: left; margin: 7px 0 0 5px; cursor: pointer;}
+
+.slider,.deletesearch{width: 2%; float: right; margin-top: 7px; margin-right: 7px; cursor: pointer;}
+
+.deletesearch{margin-top: .8%; width: 1.5%; display: none;}
+
+.main-content3 form{width: 100%;}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: -7px;
+    margin-bottom: 1%;
+    width: 100%;
+    max-width: 95%;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    padding: .6%;
+}
+
+.search-bar input[type="text"] {padding: 10px ; border: unset; background-color: unset; width: 88%; margin-left: 1%;}
+
+.search-bar input[type="text"]:focus {outline: none;}
+
+.filter{float: inline-start; width: 34%; display: contents;}
+
+.hamburger-menu {
+    font-size: 25px;
+    cursor: pointer;
+    padding: 5px;
+    color: gray;
+    border-radius: 5px;
+    margin: 8px 0 0 -30%;
+    text-align: center;
+}
+
+.task-filters {width: 4%; height: 85vh; transition: width 0.3s ease; position: fixed; top: 9%; left: 0; overflow: hidden;}
+
+.task-filters ul.open {width: 200px; margin-top: 4%; background-color: #f1f1f1;}
+
+.task-filters ul {list-style: none; padding: 0; margin: 0;}
+
+.task-filters li {display: flex; align-items: center; padding: 8px; width: 100%;}
+
+.task-filters li a {text-decoration: none; color: #333; display: flex; align-items: center; gap: 10px; white-space: nowrap;}
+
+.task-filters li a img{width: 13%;}
+
+.task-filters ul.open li a img{width: 10%;}
+
+.task-filters li a span {display: none;}
+
+.task-filters ul.open li a span {display: inline;}
+
+.main-content2.shrink {margin-left: 200px; width: calc(100% - 140px);}
+
+.task-filters ul input {margin-right: 5%;}
+
+.task-filters .caret {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: bold;
+}
+
+.task-filters .caret::before {content: "\25B6"; color: black; display: inline-block; margin-right: 6px;}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 95%;
+    height: 86%;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.modal .modal-content .activity-info .submit-form{width: 60%; margin-right: 7.5%; margin-top: 800%;}
+
+.modal .modaltab{float: right; width: 100%;}
+
+.modal .modaltab .modaltabR,.modaltabL{display: inline-block; width: 52%; cursor: pointer;}
+
+.modal .modaltab .modaltabR{float: right;}
+
+.modal .modaltab .modaltabR h3{float: right; display: block; margin: 0; margin-top: 0.6%; margin-right: 12.5%; color: black;}
+
+.modal .modaltab .modaltabR button{
+    margin-top: .5%;
+    color: white;
+    background-color: #5d00ff;
+    font-weight: 600;
+}
+
+.modal .modaltab .modaltabL{float: left; width: 33%;}
+
+.modal .modaltab .modaltabL span input{
+    float: left;
+    margin: 0;
+    margin-top: .5%;
+    margin-left: 4%;
+    color: #000000;
+    font-weight: bolder;
+    display: flex;
+    width: 100%;
+    border: unset;
+    font-size: 16px;
+    outline: unset;
+}
+
+.modal .modaltab .icon1{float: right; margin-top: 1%; margin-right: 2%;}
+
+.modal .modaltab .modaltabR img{width: 2.5%;}
+
+.modal .modal-content .taskInUpDes,
+.modal .modal-content .assignmentTable{border: unset; margin-left: -.1%; margin-bottom: 2%;}
+
+.modal .modal-content .ActionDeafult{margin-left: 0 !important; border-bottom: 1px solid #e0e0e0;}
+
+.modal .modal-content .ActionDeafult .actionText{width: 66% !important;}
+
+.modal .modal-content .ActionDeafult tr td.actionStatusContainer{width: 11% !important;}
+
+.modal .modal-content .ActionDeafult .actionDateContainer{width: 35% !important;}
+
+.modal .modal-content .ActionDeafult .table-icon img{width: 63%;}
+
+.modal .modal-content .DeafultTable{width: 100%; margin-left: 0; border-bottom: 1px solid #e0e0e0;}
+
+.modal .modal-content .actiontable{
+    width: 100%;
+    border-radius: 8px;
+    border: unset;
+    margin-left: -0.5%;
+    margin-top: .5%;
+    margin-bottom: 0;
+}
+
+.modal .modal-content .assignmentTale .actionCheckHeader{width: 4%;}
+
+.modal .modal-content .actiontable .ActionRow1 .actionNameHeader{width: 67%;}
+
+.modal .modal-content .actiontable .ActionRow1 .actionNameHeader input.inserteditable-text{width: 100%;}
+
+.modal .modal-content .actiontable .ActionRow1 .actionStatusContainer{width: 12%;}
+
+.modal .modal-content .actiontable .ActionRow1 .actionDateContainer{width: 30%;}
+
+.modal .modal-content .actiontable .dropdown-toggle{background-color: unset;}
+
+.modal .modal-content .actiontable .dropdown-toggle img{width: 220%; border-radius: 50%;}
+
+.modal .modal-content .taskInUpDes tr td input,.modal .modal-content .taskInUnderDes tr td input,
+.modal .modal-content .actiontable tr td input,.modal .modal-content .actiontableNew tr td input,
+.modal .modal-content .assignmentTable tr td input, .modal .modal-content .actiontableNew tr td
+{border: unset; border-radius: 8px;}
+
+.modal .modal-content .taskInUpDes .taskCategory{width: 35%; color: gray;}
+
+.modal .modal-content .taskInUpDes tr td select,
+.modal .modal-content .taskInUnderDes tr td select{border: unset; border-radius: 8px;}
+
+.modal .modal-content tr td .TaskDate{width: 41% !important;}
+
+.modal .modal-content tr td .TaskDate2{width: 53% !important;}
+
+.modal .modal-content tr td.dateCreation {width: 21%;}
+
+.modal .modal-content .actiontable{margin-bottom: .5%; margin-top: .7%; margin-left: .5%;}
+
+.modal .modal-content .actiontableNew{margin-bottom: .5%; margin-top: .7%; border: unset; border-radius: 8px;}
+
+.modal .modal-content .actiontableNew .actionCheckHeader{width: 3.8%;}
+
+.modal .modal-content .actiontableNew .actionStatusContainer{width: 12%;}
+
+.modal .modal-content .actiontableNew .actionDateContainer{width: 18%;}
+
+.actiontable .actionText{width: 55% !important;}
+
+.actiontable .ActionRow1 .actionText{width: 66.5% !important;}
+
+.actiontable .actionText input{width: 96% !important;}
+
+.modal .modal-content .actiontable:hover, .modal .modal-content .actiontableNew:hover,
+.modal .modal-content .actiontableNew:hover tr td input,
+.modal .modal-content .actiontable:hover tr td input{background-color: #fbfbfc;}
+
+.modal .modal-content .actiontable .table-icon, .modal .modal-content .actiontableNew .table-icon
+{margin-top: 0.5%; width: 12%; margin-right: 10%; }
+
+.modal .modal-content .actiontable .insert img{width: 59%;}
+
+.modal .modal-content .actiontableNew .table-icon img{width: 63%;}
+
+.modal .modal-content .taskInUpDes tr td,
+.modal .modal-content .taskInUnderDes tr td,
+.modal .modal-content .actiontable tr td,
+.modal .modal-content .assignmentTable tr td{border: unset;}
+
+.modal .modal-content .actionTableHeader,
+.modal .modal-content .actionTableHeader tr td{border: unset;}
+
+.modal .modal-content .actionDB{border-bottom: 1px solid #e0e0e0;}
+
+.modal .modal-content .AssignmentID{width: 3%;}
+
+.modal .modal-content .AssignmentInfo{width: 12%;}
+
+.modal .modal-content .AssignmentReson{width: 50%;}
+
+.modal .modal-content .AssignmentTo-By {width: 16%;}
+
+.modal .modal-content tr td.actionCheckHeader{width: 3.3%;}
+
+.modal .modal-content td.actionCheckHeader input{text-align: center; width: 86% !important;}
+
+.modal .modal-content tr td.actionNameHeader{width: 66.5%;}
+
+.modal .modal-content tr td.actionStatusHeader{width: 11%;}
+
+.modal .modal-content .actiontable tr td.actionStatusContainer{width: 18.5%;}
+
+.modal .modal-content .actiontable tr td.actionStatusContainer .table-icon img{width: 60%;}
+
+.modal .modal-content .actiontable .ActionRow .actionCheckHeader{padding: 0;}
+
+.modal .modal-content .actiontable tr td.assignmentuser{width: 16.6%;}
+
+.modal .modal-content .actiontable tr td.assignmentuser input{width: 90%;}
+
+.modal .modal-content .actiontable tr td.assignmentuser2{width: 20%;}
+
+.modal .modal-content .actiontable tr td.assignmentuser2 input{width: 65%;}
+
+.modal .modal-content .actiontable tr td.assignmentuser2 input:focus{outline: none;}
+
+.modal .modal-content .actiontable tr td.assignmentuser2 .table-icon{width: 11.4%;}
+
+.modal .modal-content .actiontable tr td.assignmentuser2 .table-icon img{width: 100%;}
+
+.modal .modal-content .actiontable tr td.assignmentReason{width: 50%;}
+
+.modal .modal-content .actiontable tr td.assignmentReason input{width: 96%;}
+
+.modal .modal-content .actiontable tr td.assignedtoass{width: 10%;}
+
+.modal .modal-content .actiontable tr td.actionDateContainer{width: 12%;}
+
+.modal .modal-content .actiontable tr td.actionDateContainer input{width: 50%;}
+
+.modal .modal-content .actiontable tr td.assDate input{width: 82%;}
+
+.modal .modal-content .taskInUpDes, .taskInUnderDes{border: unset;}
+
+.modal .modal-content .taskInUnderDes input:focus{outline: unset;}
+
+.modal .modal-content tr td.taskFiled{width: 8%;}
+
+.modal .modal-content .taskInUpDes tr td.Middletask{width: 8%;}
+
+.modal .modal-content tr td.taskName{width: 10%;}
+
+.modal .modal-content tr td.taskdate{width: 13%;}
+
+.modal .modal-content tr td.taskbfil{width: 9%;}
+
+.modal .modal-content td input.taskin{width: 84% !important;}
+
+.modal .modal-content td .insertActionStatus{outline: gray; color: gray;}
+
+.modal .modal-content td input.readonly:focus{outline: none;}
+
+.modal .modal-content td input.referenceId{width: 17% !important;}
+
+.modal .modal-content td select:focus,
+.modal .modal-content td input:focus,
+.modal .modal-content textarea:focus{outline: .5px solid gray; border-radius: 8px;}
+
+.modal .modal-content td select{border-radius: 8px;}
+
+.modal .modal-content .task-slider{width: 100%; top: 91%; left: -11%; position: absolute;}
+
+.modal .modal-content .task-slider input{width: 5%; border: unset; border-radius: 8px; margin-right: -0.1%;}
+
+.modal .modal-content .task-slider input:focus{outline: none;}
+
+.modal .modal-content .task-slider .slideRight,.slideLeft{font-size: larger; cursor: pointer; font-weight: bolder;}
+
+.modal .modal-content .task-info{
+    height: 85%;
+    width: 77%;
+    border-right: 1px solid #ccc;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #ffffff;
+}
+
+.star.selected,
+.starr.selected {color: gold;}
+
+.star, .starr{font-size: 130%; cursor: pointer;}
+
+.modal .modal-content .task-info .task-description,.task-attachment{width: 100%; float: left;}
+
+.modal .modal-content .task-info .task-description{margin-left: -.4%; margin-bottom: 1%;}
+
+.modal .modal-content .task-info .task-attachment input{width: 85%; margin-top: 1%; color: gray;}
+
+.modal .modal-content .task-info textarea{width: 100.2%; height: 245px; border: 2px solid #ccc; border-radius: 8px;}
+
+.modal .modal-content hr{margin-top: 2.5%;}
+
+.modal .modal-content .activity{height: 90%; width: 19%; float: right;}
+
+.modal .modal-content .activity .activity-info{
+    background-color: #ffffff;
+    height: 92%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #ffffff;
+    margin-bottom: 2%;
+    font-size: 14px;
+    border: 1px solid #80808057;
+    border-radius: 10px;
+}
+
+.modal .modal-content .icon .activity-info .task-icon{width: 45%; cursor: pointer; margin-bottom: 30%; padding: 10%;}
+
+.modal .modal-content .icon .activity-info .task-icon:hover{background-color: #eaeaea;}
+
+.modal .modal-content .activity-info .commentsTable, .commentsTable td{border: none;}
+
+.modal .modal-content .activity .comment{padding: 1%; background-color: white; display: inline-flex; border-radius: 9px; width: 100%;}
+
+.modal .modal-content .activity .comment-input{
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #f5f5f5;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+    float: left;
+}
+
+.modal .modal-content .activity .comment-input:focus{outline: none;}
+
+.modal .modal-content .activity .comment-button{
+    background-color: #8a8af5;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    width: 13%;
+    float: right;
+}
+
+.modal .modal-content .activity .comment-button:disabled {background-color: #e0e0ff; cursor: not-allowed;}
+
+.modal .modal-content .icon{float: right; width: 3%;}
+
+.modal .modal-content .icon ul{list-style: none; padding: 0; margin: 0;}
+
+/* زر الإغلاق */
+.close {float: right; font-size: 30px; font-weight: bold; cursor: pointer; color: black;}
+
+.upload-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-container p{margin: 1% 0;}
+
+.upload-container p span{text-decoration: underline;}
+
+.upload-container:hover {border-color: #aaa; background-color: #f0f0f0;}
+
+.upload-container input[type="file"] {display: none;}
+
+.fileInput{display: none;}
+
+/* تنسيق التابات */
+.tab-buttons {display: flex; gap: 10px; cursor: pointer; margin-left: 1.4%;}
+
+.tab-buttons .tabdiv {padding: 0 10px;}
+
+.tab-buttons .active {color: #000000; font-weight: 700; border-bottom: 2px solid #5d00ff;}
+
+/* استايل الشريط */
+.stage-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    margin: 0;
+    padding:0 !important;
+    position: relative;
+    right: -42%;
+    margin-top: 1%;
+}
+
+.stage-line h4{margin: 0;}
+
+.stage-line h4 span{
+    height: 12px;
+    width: 4%;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+/* تنسيق المحتوى */
+.tab-content {display: none; padding: 20px; padding-top: 1%;}
+
+.tab-content.active {display: block;}
+
+.checklist-container {color: #333;}
+
+.checklist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    width: 99%;
+    background-color: #fbfbfc;
+    padding: 0.5%;
+}
+
+.actionDB{border-bottom: 1px solid #e0e0e0;}
+
+.checklist-box {border-radius: 5px; padding: 10px 0 0 5px; width: 100%; margin-left: -1%;}
+
+.checklist-item {width: 100%; display: flex; align-items: center; border-bottom: 1px solid #e0e0e0; margin-left: -1%;}
+
+.checklist-item:last-child {border-bottom: none;}
+
+.checkbox {width: 3% !important; margin-top: -0.2% !important;}
+
+.editable-text {background: none; margin-top: 0 !important; cursor: pointer; outline: none; width: 95% !important;}
+
+.editable-text:focus {border-bottom: 1px solid #333;}
+
+/* تنسيق صورة المعاينة */
+.uploadedImage {
+    max-height: 102px;
+    max-width: 145px;
+    border: 1px solid #ccc;
+    margin-right: 2%;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* تنسيق الجدول */
+#dataTable {border-collapse: collapse; width: 87%;}
+#dataTable td {padding: 5px; border: 1px solid #ddd;}
+
+/* تنسيق القسم بالكامل */
+#upload-section {margin-top: 20px;}
+
+/* تنسيق المعاينات */
+.attachment-preview {display: flex; align-items: flex-start; margin-top: 10px; width: 100%;}
+
+/* تنسيق الجدول */
+.dataTable{border-collapse: unset; width: 100%; border: unset; justify-content: left; display: flex;}
+
+.dataTable tbody{width: 100%;}
+
+.attachment-preview:hover button.attacadd{display: block;} 
+
+.dataTable tbody{width: 100%;}
+
+.dataTable tr td,.dataTable tr td input {border: unset;}
+
+.dataTable td {padding: 0; border: 1px solid #ddd;}
+
+.dataTable td.smallSize {width: 11%;}
+
+.dataTable td.mixsize {width: 15%;}
+
+.dataTable td.mediumSize {width: 13%;}
+
+.dataTable td.largeSize {width: 22%;}
+
+.dataTable td.textwrite {width: 88% !important;}
+
+.dataTable td.textwrite textarea {width: 113% !important;}
+
+.dataTable td.textwrite textarea.DeafultDes{width: 105% !important;}
+
+.dataTable tr td textarea{height: 40px !important;}
+
+button.attacadd{width: 3%; height: 1%; background-color: unset; display: none;}
+
+.attacadd img{width: 60%; object-fit: cover;}
+
+.imgContainer{margin-right: 2%; width: 20%; position: relative;}
+
+/* نافذة التكبير */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal-content {display: block; margin: 5% auto; max-width: 80%; max-height: 80%;}
+
+/* زر الإغلاق */
+.close-modal {position: absolute; top: 20px; right: 35px; color: white; font-size: 35px; font-weight: bold; cursor: pointer;}
+
+.grayColor,.taskType,.taskStatus,.TaskStage{color: gray; outline: none; border: none; cursor: pointer;}
+
+/* اللون عند تحديد الصف */
+tr.selected {background-color: #eeeeee; border-radius: 8px;}
+
+.footer-message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: bolder;
+    color: black;
+    display: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.swal2-actions{width: 100%;}
+.swal2-styled{width: 45%;}
+
+/* عرض الصفحة على شاشات أصغر من 480 بكسل*/
+@media only screen and (max-width: 500px) {
+    header nav.header-tabs ul{margin-left: 2% !important;}
+    header nav.header-tabs ul li{margin-right: 2% !important;}
+    header nav.header-tabs ul li a {padding: 5px !important;}
+    header .dropdown-user .dropdown-content-user {margin-left: -430% !important;}
+    .main-content2 table button.table-icon {width: 4% !important;}
+}
+
+/* شاشات الهواتف */
+@media only screen and (max-width: 600px) {
+   
+    body{font-size: 12px;}
+
+    .container {width: 100%; padding: 0;}
+
+    header img.logo{margin-left: 3%; width: 12%; height: 110%;}
+    header img.arrow {width: 87%;}
+    header nav.header-tabs{width: 73%;}
+    header .header-tabs .not {width: 4%; margin-top: 2.4%;}
+    header nav.header-tabs ul {margin-left: .4%; margin-top: 2%;}
+    header .dropdown{margin-right: 1%; margin-top: 2.8%; width: 3%;}
+    .dropdown-user{margin-right: 2.2%; margin-top: 1.7%; width: 3.5%;}
+    header .dropdown img{margin: 0; width: 135%;}
+    header .dropdown .dropdown-content{min-width: 105px; margin-left: -592%; margin-top: 175%; font-size: 13px;}
+    header .dropdown-user .dropdown-content-user{margin-left: -400%; margin-top: 95%; min-width: 90px; font-size: 13px;}
+    nav.header-tabs ul li a, .dropdown-user ul li a {padding: 5px 14px;}
+
+    .main-content3{margin: 5% 0 3% 5.7%; width: 94%;}
+    .serach{width: 4%; margin: 4px 0 0 0;}
+    .slider{width: 4%;  margin: 1% 0 0 0;}
+    .search-bar {max-width: 95%;}
+    .search-bar input[type="text"] {padding: 5px; font-size: 12px; width: 81%;}
+    .deletesearch {width: 3%;}
+
+    .main-content2{width: 95.6%;}
+    .main-content2 .table-header{width: 97%;}
+    .main-content2 .table-header .header-content{font-size: 12px; width: 3%;}
+    .main-content2 table button.table-icon {width: 3%;}
+    .main-content2 .table-header .header-name {width: 38%;}
+
+    .serachcon {margin-bottom: 2%;}
+    .task-filters {width: 100%; height: auto;}
+    .task-filters .task-display {width: 100%; justify-content: center; margin-bottom: 0;}
+    .task-filters .task-display img.task-display-icon {width: 15%;}
+    .task-filters .task-display div {width: 20%;}
+    .task-filters .nested {width: 108%;}
+    .task-filters ul li {width: 37%;}
+    .main-content2 .table-header .header-status {width: 16%; margin-left: 3%;}
+    .main-content2 .table-header .header-date {width: 15%; margin-left: 0;}
+}
+
+/* شاشات الأجهزة اللوحية */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {width: 100%; padding: 0; display: block;}
+
+    header img.logo{margin-left: 1.5%; width: 7%; height: 140%;}
+    header nav.header-tabs{width: 82%;}
+    header nav.header-tabs ul {margin-left: .4%; margin-top: 2%;}
+    header .dropdown{margin-top: 2.5%; margin-right: -7%; width: 2%;}
+    .dropdown-user{margin-top: 1.7%; width: 2.5%;}
+    header .dropdown img{margin: 0; width: 90%;}
+    header .dropdown .dropdown-content{min-width: 105px; margin-left: -592%; margin-top: 70%;}
+    header .dropdown-user .dropdown-content-user{margin-left: -323%; min-width: 90px;}
+    nav.header-tabs ul li a, .dropdown-user ul li a {padding: 5px 14px;}
+    nav.header-tabs ul li {margin: 2px 0px 5px 20px;}
+
+    .main-content3{margin-bottom: 2%; margin-top: 1%; width: 94%;}
+    .serach{width: 4%; margin: 4px 4px 0 -7px;}
+    .slider{width: 4%; margin: 0.5% 28% 0 0;}
+    .search-bar input[type="text"] {padding: 5px; width: 60%;}
+
+    .main-content2{width: 95.6%;}
+    .main-content2 .table-header{width: 97%;}
+    .main-content2 .table-header .header2{width: 54%;}
+    .main-content2 table button.table-icon {width: 2.5%;}
+
+    .serachcon {margin-bottom: 2%;}
+}
+
+
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* إخفاء النافذة الافتراضي */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* محتوى النافذة */
+.alert-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+/* نص الرسالة */
+.alert-box p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* زر التأكيد */
+.alert-box button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15%;
+}
+
+.alert-box button:hover {
+    background-color: #0056b3;
+}
+
+/* تأثير الظهور */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.Deletemodal {
+    background: #ffffff;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    display: none;
+}
+
+.Deletemodal.show {
+    display: block;
+}
+
+.modal-icon {
+    margin: 0 auto 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #f4a261;
+}
+
+.modal-icon.success {
+    border-color: #2a9d8f;
+}
+
+.modal-icon.error {
+    border-color: #e76f51;
+}
+
+.modal-icon span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal-icon span.warning {
+    color: #f4a261;
+}
+
+.modal-icon span.success {
+    color: #2a9d8f;
+}
+
+.modal-icon span.error {
+    color: #e76f51;
+}
+
+.Deletemodal h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.Deletemodal p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-buttons .delete {
+    background: #5c63d3;
+    color: white;
+}
+
+.modal-buttons .delete:hover {
+    background: #4b52c3;
+}
+
+.modal-buttons .cancel {
+    background: #7e7e7e;
+    color: white;
+}
+
+.modal-buttons .cancel:hover {
+    background: #6c6c6c;
+}
+
+.ok-button {
+    background: #5c63d3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.ok-button:hover {
+    background: #4b52c3;
+}
+
+#triggerButton {
+    background: #f4a261;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#triggerButton:hover {
+    background: #e68a51;
+}
