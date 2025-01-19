@@ -1,0 +1,769 @@
+/* General style */
+body {
+    background-color: #f2f2f2;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.clearfix::after { content: ""; clear: both; display: table; }
+
+/* header style */
+header {
+    display: list-item;
+    flex-direction: column; /* عمود واحد */
+    align-items: center; /* محاذاة للمركز */
+    color: white; 
+    height: 45px;
+    padding: 0;
+    margin: 0;
+}
+
+header img.logo {
+    width: 80px;
+    float: left;
+    border-radius: 50%;
+    height: 70px;
+    margin: 4px 0 0 5px;
+}
+
+nav.header-tabs {
+    width: 88.8%; /* عرض الـ tabs بالكامل */
+    justify-content: center; /* محاذاة العناصر في المنتصف */
+    float: left;
+}
+
+nav.header-tabs ul{
+    list-style-type: none; /* إزالة النقاط من القائمة */
+    padding: 0;
+    margin-left: 5px;
+    display: inline-flex; /* استخدام flexbox لترتيب العناصر */
+}
+
+.dropdown-user ul{
+    list-style-type: none; /* إزالة النقاط من القائمة */
+    padding: 0;
+    margin-left: 5px;
+}
+
+nav.header-tabs ul li,
+.dropdown-content-user ul li { margin: 2px 0px 5px 0px ; /* المسافة بين كل تبويب */ }
+
+nav.header-tabs ul li a,
+.dropdown-user ul li a {
+    text-decoration: none; /* إزالة التسطير */
+    color: #6d6b6b; /* لون النص */
+    padding: 5px 20px; /* الحشو الداخلي */
+    border-radius: 5px; /* زوايا مستديرة */
+    font-weight: bold; /* خط عريض */
+    transition: background-color 0.3s ease; /* تأثير الانتقال */
+}
+
+nav.header-tabs ul li a:hover,
+.dropdown-user ul li a:hover {
+    background-color: #bfbfbf;
+    color: #000006;
+    font-weight: bolder;
+}
+
+.my-icon{
+    width: 2.6%;
+    float: right;
+    margin: -56.8% -4% 0 0;
+}
+
+.my-icon img{
+    width: 65%;
+    display: block;
+    margin-bottom: 31%;
+}
+
+header img.notification2{ margin: 14.5% -2.6% 0 0; }
+ 
+header img.notification3{ margin: 16.5% -2.6% 0 0; }
+ 
+header img.notification4{ margin: 18.5% -2.6% 0 0; }
+ 
+header img.notification5{ margin: 20.5% -2.6% 0 0; }
+
+header img.bar{
+    width: 70%;
+    cursor: pointer;
+    float: right;
+    margin: 34% -170% 0 0;
+}
+
+.dropdown,
+.dropdown-user{
+    position: relative;
+    float: right;
+    margin: .8%;
+    width: 2%;
+}
+
+.dropdown-user{
+    margin-top: 1%;
+}
+
+.dropdown .dropdown-content-li {display: block;}
+  
+.dropdown-content,
+.dropdown-content-user{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 115px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: -180%;
+    margin-top: 89%;
+    text-align: center;
+    border-radius: 15%;
+}
+
+.dropdown-content-user{
+    margin-left: -290%;
+    margin-top: 86%;
+}
+
+.dropdown-content-user .lang-sett{
+    display: none;
+    margin-right: 7%;
+    background-color: #dcdada;
+}
+
+.dropdown-content-user .lang:hover .lang-sett{display: block;}
+  
+.dropdown:hover .dropdown-content,
+.dropdown-user:hover .dropdown-content-user{display: block;}
+
+nav.header-tabs .navigation .submenu:before{
+    content: "";
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #fff;
+    height: 0px;
+    width: 0;
+    position: absolute;
+    left: 80px;
+    top: -9px;
+}
+
+header img.arrow{
+    width: 70%;
+    cursor: pointer;
+    float: right;
+    margin: 4% 1.5% 0 0;
+    border-radius: 50%;
+}
+
+nav.header-tabs .navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+nav.header-tabs .navigation .menu  {position: relative;}
+
+nav.header-tabs .navigation .menu .submenu  {
+    position: absolute;
+    top: 33px;
+    left: 0;
+    width:150px;
+    background-color: #fdfdfd;
+    padding: 10px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0, .5);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0, .5);
+    box-shadow: 0 1px 1px rgba(0,0,0, .5);  
+    display: none;
+    margin: 2px 0px 5px -20px;
+}
+
+nav.header-tabs .navigation .submenu li  { width: 100%; display: flex; }
+
+nav.header-tabs .navigation .submenu li a  {
+    color: #777;
+    text-decoration: none;
+    text-align: center;
+    width: 40%;
+}
+
+nav.header-tabs .navigation .submenu li a:hover  { color: #ffffff; }
+
+nav.header-tabs .navigation .submenu:before  {
+    content: "";
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #fff;
+    height: 0px;
+    width: 0;
+    position: absolute;
+    left: 80px;
+    top: -9px;
+  
+}
+nav.header-tabs .navigation .menu:hover .submenu { display: block; }
+
+/* main-content style */
+.main-content{
+    float: right;
+    scrollbar-color: #8c8a8a #e0dcdc;
+    width: 65%;
+    margin: -35% 2.3% 0.3% 0;
+    padding-top: 4px;
+    height: 550px;
+}
+
+.main-content .section.active{background-color: #ccc;}
+
+.main-content form{
+    background-color: #fff;
+    height: 560px;
+    overflow-x: unset;
+    overflow-y: scroll;
+}
+
+.main-content .submit-form{
+    width: 4%;
+    float: right;
+    margin-top: -9%;
+    margin-right: -4%;
+}
+
+.main-content .check-delete{width: 10%; margin-top: 2%;}
+
+.main-content label ,
+.main-content input {
+    display:inline-block ;
+    width: 13%;
+    text-align: start;
+    margin-left: 1%;
+}
+
+.main-content .mul{width: 9.5%;}
+
+.main-content input {text-align: start;}
+
+.main-content label{text-align: end;}
+
+.main-content label.select-all{width: 7%;  margin: 0;}
+
+.main-content label.select{width: 4.7%;  margin: 0;}
+
+.main-content textarea{height: 0.5%; padding: 0px;}
+
+form label.strategylabel{width: 12.7%; margin-right: 2.5%;}
+
+form label {font-weight: bold;}
+
+form label.reportdate{width: 11.6%; margin-left: 3.5%; margin-right: .9%;}
+
+form [class = "multiselect"] {width: 9%; margin-left: 1%; margin-right: .5%;}
+
+form [class = "multiselect1"] {width: 9%; margin-left: 0; margin-right: 1%;}
+
+form [class = "select-option"] {margin-left: 3%; width: 6%; margin-right: 0%;}
+
+form input[class = "select-date"],
+form input[class = "select-date-score"],
+form input[class = "select-date-stategy"],
+form input[class = "select-date-stategy1"] {
+    width: 13.3%;
+    margin-left: 0;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[class = "select-date-score"] {margin-left: 1%;}
+
+form input[class = "select-date"] {margin-left: 0;}
+
+form input[class = "select-date-stategy"] {margin-left: -2%; margin-right: 7%;}
+
+form input[class = "select-date-stategy1"] {margin-left: 1%;  margin-right: 5.2%;}
+
+form input[class = "report-input"] {
+    width: 13.4%;
+    margin-left: 0;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[class = "text"],
+form textarea,
+form select {
+    width: 84%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[class = "text_area"] {
+    width: 84%;
+    padding: 23px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e7e6e6;
+    color: #c2bfbf;
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+    width: 8%;
+    padding: .7% 0;
+}
+
+button:hover,
+.main-content button.new:hover,
+.main-content button.delete:hover,
+.main-content button.save:hover{ 
+    background-color: #bfbfbf;
+    color: #000006;
+    font-weight: bolder;
+ }
+
+.main-content button{margin: 1% .3% 1% .4%;}
+
+.main-content button.new,
+.main-content button.delete,
+.main-content button.save{
+    width: 110%;
+    padding: 0;
+    background-color: unset;
+    margin: .3% 0 .5% 0;
+    float: right;
+}
+
+.main-content button.delete,
+.main-content button.save{margin-right: -1%;}
+
+.main-content button img{width: 38%; padding: 5%;}
+
+.status-table th input.check-delete{width: 100%;}
+
+.status-table td.status-date{width: 6%; padding: 0;}
+
+.status-table td.select-data{width: 9%;}
+
+.status-table td.select-data input{width: 100%;}
+
+.status-table td.status-date input{
+    width: 92%;
+    padding: 5px;
+    border: none;
+    margin-right: 0;
+    margin-top: 0;
+}
+.status-table td.status-status{width: 13%; padding: 0;}
+
+.status-table td.status-status select{padding: 5px; border: none; margin-top: 0;}
+
+.status-table td.status-owner{padding: 0; width: 31%;}
+
+.status-table td.status-owner input{margin-top: 0;  margin-left: 5px; padding: 5px; width: 97%;}
+
+.status-table td.status-remark{padding: 0;}
+
+.status-table td.status-remark textarea{margin-left: 5px; width: 97%; height: 48px;}
+/* main-content 2 style */
+.main-content2{
+    width: 31.6%;
+    background-color: #f2f2f2;
+    scrollbar-color: #8c8a8a #e0dcdc;
+    height: 525px;
+    margin-left: .8%;
+    margin-top: -.6%;
+}
+
+table { width: 100%;  border-collapse: collapse; }
+
+table thead{display: contents;}
+
+table thead tr th.id{width: 3%; position: fixed;}
+
+table thead tr th.scenario{width: 17%; position: fixed; margin-left: 4.5%;}
+
+table thead tr th.status{position: fixed; margin-left: 23.1%; width: 5.7%;}
+
+table tr td.id{width: 15%;}
+
+table tr td.scenario{width: 61%;}
+
+table, th, td { border: 1px solid #ddd; }
+
+th, td { padding: 5.6px 12px; text-align: left; }
+
+th { background-color: #bfbfbf; }
+
+td {cursor: pointer;}
+
+table button.table-icon{
+    width: 5%;
+    margin: 0 1.2%;
+    float: right;
+    background: unset;
+    display: none;
+}
+
+table button.table-icon img{ width: 100%;}
+
+table tr:hover td{background-color: #ccc;}
+
+table tr:hover button.table-icon{display: block;}
+
+.main-content2 .table-header{background-color: #f2f2f2;}
+
+.main-content2 .table-header .header-content{
+    color: #232323;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 2% 2% 2% 2%;
+}
+
+.main-content2 .table-header .header1{width: 15%;}
+
+.main-content2 .table-header .header2{width: 58%;}
+
+.main-content2 .table{
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;  
+}
+
+/* main-content 3 style */
+.main-content3{width: 98%; margin-left: 1.5%;}
+
+.main-content3 .serachcon{
+    width: 27%;
+    margin-left: 1%;
+    margin-top: .5%;
+    padding: 0 0 0 5px;
+    display: inline-block ;
+}
+
+.main-content3 .serach{
+    width: 5%;
+    float: left;
+    margin: 9px 5px 0 -15px;
+    cursor: pointer;
+}
+
+.main-content3 .slider{
+    width: 5%;
+    float: right;
+    margin: 9px 24px 0 0;
+    cursor: pointer;
+}
+
+.main-content3 .searchcontent{ display: inline-block; margin-left: -.2%; width: 66%;}
+
+.main-content3 .searchcontent div{ display: inline;  margin-right: 2%;}
+
+.main-content3 .search-bar {
+    display: flex; /* استخدام flexbox لترتيب العناصر */
+    justify-content: center; /* محاذاة للعناصر في المنتصف */
+    margin-top: -7px; /* المسافة من الأعلى */
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.main-content3 .search-bar input[type="text"] {
+    padding: 10px ; /* الحشو الداخلي */
+    border: 1px solid #ccc; /* الحدود */
+    width: 79%; /* عرض الشريط */
+}
+
+/* sidebar style */
+.sidebar{
+    float: left;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    margin-top: 1%;
+    margin-right: .5%;
+    text-align: center;
+    width: 9%;
+}
+
+.sidebar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li{ padding: 15px;  border-bottom: 1px solid #ccc; }
+
+.sidebar ul li:hover{ background-color: #e3e3e3; cursor: pointer; }
+
+/* محتوى الصفحة الرئيسي */
+
+.tabs{
+    float: right;
+    width: 67.8%;
+    text-align: center;
+    border-radius: 2%;
+    margin-right: 0.4%;
+    }
+
+.tabs ul{list-style-type: none;}
+
+.tabs li{
+    background-color: #e7e6e6;
+    border-radius: 10%;
+    width: 10%;
+    margin-right: 12px;
+    margin-top: 0;
+    color: #c2bfbf;
+    float: left;
+    padding: .5%;
+}
+
+.tabs li:hover{
+    background-color: #bfbfbf;
+    color: #000006;
+    font-weight: bolder;
+}
+
+/* Tab Content */
+.tab_fixed {
+    float: right;
+    margin-top: -37.2%;
+    margin-bottom: .2%;
+    width: 67.4%;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.tab_fixed button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 6px 0;
+    font-size: 15px;
+    transition: 0.3s;
+    float: left;
+    width: 11%;
+    margin-right: 0%;
+}
+
+.tab_fixed button:hover {background-color: #ddd;}
+
+.tab_fixed button.active {
+    background-color: #ccc;
+    color: black;
+    font-weight: bold;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.filter{
+    float: inline-start;
+    width: 34%;
+    display: contents;
+}
+
+.grouping-bar select,
+.view-bar select,
+.sorting-bar select{
+    width: 62%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.grouping-bar{margin-left: -.9%;}
+
+.view-bar,.grouping-bar,.sorting-bar{display: inline-block;}
+
+.sorting-bar{width: 14.8%;}
+
+.view-bar, .grouping-bar, .sorting-bar, .search-bar {margin-bottom: 14px;}
+
+.view-bar{margin: -2%; width: 7.4%;}
+
+.tree-container, .table-container {display: none;}
+
+/* عرض الصفحة على شاشات أصغر من 480 بكسل*/
+@media only screen and (max-width: 500px) {
+
+    header nav.header-tabs ul{margin-left: 5% !important;}
+    header nav.header-tabs ul li{margin-right: 2% !important;}
+    header nav.header-tabs ul li a {padding: 5px !important;}
+    header .dropdown-user .dropdown-content-user {margin-left: -430% !important;}
+
+    .main-content form {padding: 0 !important;}
+    .main-content .my-icon {margin-top: -119%  !important;}
+    .main-content button img {width: 45% !important;}
+    .main-content .submit-form {margin-top: -14% !important;}
+    .main-content .multiselect1 {width: 22.6% !important;}
+    .main-content form input[class = "report-input"],
+    .main-content form input[class = "select-date"] {width: 28% !important;}
+    .main-content form .reportdate {width: 22.5% !important;}
+    form input.stat{width: 83% !important;}
+    form input[class = "select-date-score"],
+    form input[class = "select-date-stategy"],
+    form input[class = "select-date-stategy1"] {width: 28% !important;}
+
+    .main-content2 table button.table-icon {width: 4% !important;}
+
+    .main-content3 .searchcontent{display: block; margin-bottom: 2%; margin-left: 16%;}
+}
+
+/* شاشات الهواتف */
+@media only screen and (max-width: 600px) {
+   
+    body{font-size: 12px;}
+
+    .container {width: 100%; padding: 0;}
+
+    header img.logo{margin-left: 3%; width: 9%; height: 110%;}
+    header nav.header-tabs{width: 82%;}
+    header nav.header-tabs ul {margin-left: .4%; margin-top: 2%;}
+    header .dropdown{margin-right: 1%; margin-top: 2.5%; width: 3%;}
+    .dropdown-user{margin-right: 1.2%; margin-top: 1.7%; width: 3.5%;}
+    header .dropdown img{margin: 0; width: 90%;}
+    header .dropdown .dropdown-content{min-width: 105px; margin-left: -592%; margin-top: 70%;}
+    header .dropdown-user .dropdown-content-user{margin-left: -400%; min-width: 90px;}
+    nav.header-tabs ul li a, .dropdown-user ul li a {padding: 5px 14px;}
+
+    .main-content3{margin-bottom: 2%; margin-top: 1%; width: 94%;}
+    .main-content3 .serach{width: 6%; margin: 4px 4px 0 -7px;}
+    .main-content3 .slider{width: 7%;  margin: 1% -4% 0 -3%;}
+    .main-content3 .search-bar input[type="text"] {padding: 5px; font-size: 12px;}
+
+    .filter .grouping-bar{width: 35%;}
+    .filter .grouping-bar select{width: 62%; font-size: 12px;}
+    .filter .sorting-bar{width: 37%;}
+    .filter select{padding: 1px;}
+    .filter .sorting-bar select{width: 75%; font-size: 12px;}
+    .filter .view-bar{width: 20%; margin-left: 2%;}
+    .filter .view-bar select{font-size: 12px;}
+    .view-bar, .grouping-bar, .sorting-bar, .search-bar {margin-bottom: 2px; margin-top: 2px;}
+
+    .tab_fixed{width: 86%; float: unset; margin: 1.5% 0 6.5% 5%;}
+    .tab_fixed button{width: 14%; margin: 5px 3px; padding: 2px 0; font-size: 12px;}
+    .tab_fixed:first-child{margin-left: 9%;}
+
+    .tabcontent{display: block; padding: 6px 0; margin-left: .8%; width: 97.3%;}
+    .main-content{width: 100%; display: contents;}
+    .main-content form{width: 95%;}
+    .main-content .check-delete {width: 20%; margin-top: 5%; display: block;}
+    .main-content .select-option{margin-right: 1%; width: 37.8%;}
+    .main-content .multiselect{width: 17%; font-size: 12px;}
+    .main-content .multiselect1{width: 20%; font-size: 12px;}
+    .main-content .mul{width: 13.3%;}
+    .main-content form .reportdate {width: 32.5%;}
+    .main-content form input[class = "report-input"],
+    .main-content form input[class = "select-date"] {width: 23%;}
+    .main-content .submit-form{width: 8%; margin-top: -13%; margin-right: -2%;}
+    .main-content button.new{width: 80%; float: left; display: block;}
+    .main-content button.save,
+    .main-content button.delete{width: 80%; float: left;}
+    .main-content .my-icon{width: 3.6%; float: right; margin: -96.8% 0 0 0;}
+    .main-content .appdate{width: 18%;}
+    form input[class = "select-date-stategy"] {margin-right: 0;}
+
+    .main-content2{width: 95.6%;}
+    .main-content2 .table-header{width: 97%;}
+    .main-content2 .table-header .header2{width: 54%;}
+    .main-content2 .table-header .header-content{font-size: 12px;}
+    .main-content2 table button.table-icon {width: 3%;}
+
+    .main-content3 .serachcon {margin-bottom: 2%;}
+
+}
+
+/* شاشات الأجهزة اللوحية */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {width: 100%; padding: 0; display: block;}
+
+    header img.logo{margin-left: 1.5%; width: 7%; height: 140%;}
+    header nav.header-tabs{width: 82%;}
+    header nav.header-tabs ul {margin-left: .4%; margin-top: 2%;}
+    header .dropdown{margin-top: 2.5%; margin-right: -7%; width: 2%;}
+    .dropdown-user{margin-top: 1.7%; width: 2.5%;}
+    header .dropdown img{margin: 0; width: 90%;}
+    header .dropdown .dropdown-content{min-width: 105px; margin-left: -592%; margin-top: 70%;}
+    header .dropdown-user .dropdown-content-user{margin-left: -323%; min-width: 90px;}
+    nav.header-tabs ul li a, .dropdown-user ul li a {padding: 5px 14px;}
+    nav.header-tabs ul li {margin: 2px 0px 5px 20px;}
+
+    .main-content3{margin-bottom: 2%; margin-top: 1%; width: 94%;}
+    .main-content3 .serach{width: 4%; margin: 4px 4px 0 -7px;}
+    .main-content3 .slider{width: 4%; margin: 0.5% 28% 0 0;}
+    .main-content3 .search-bar input[type="text"] {padding: 5px; width: 60%;}
+
+    .filter .grouping-bar{width: 28%;}
+    .filter .grouping-bar select{width: 40%;}
+    .filter .sorting-bar{width: 23%;}
+    .filter select{padding: 1px;}
+    .filter .sorting-bar select{width: 75%;}
+    .filter .view-bar{width: 13%; margin-left: 11%;}
+    .view-bar, .grouping-bar, .sorting-bar, .search-bar {margin-bottom: 2px; margin-top: 2px;}
+
+    .tab_fixed{width: 86%; float: unset; margin: 1.5% 0 4.8% 5%;}
+    .tab_fixed button{width: 14%; margin: 5px 3px; padding: 9px 0;}
+    .tab_fixed:first-child{margin-top: 4%; margin-bottom: 8%; margin-left: 0;}
+
+    .tabcontent{display: block; padding: 6px 0; margin-left: .8%; width: 97.3%;}
+    .main-content{width: 100%; display: contents;}
+    .main-content form{width: 98%;}
+    .main-content .check-delete {width: 20%; margin-top: 5%; display: block;}
+    .main-content .select-option{margin-right: 1%; width: 3.8%; margin-left: 2%;}
+    .main-content .multiselect{width: 10%;}
+    .main-content .multiselect1{width: 12%;}
+    .main-content .mul{width: 8.3%;}
+    .main-content form .reportdate {width: 11.5%;}
+    .main-content form input[class = "report-input"],
+    .main-content form input[class = "select-date"] {width: 13%;}
+    .main-content .submit-form{width: 4%; margin-top: -9%; margin-right: -1.4%;}
+    .main-content button.new{width: 112%; float: left; display: block;}
+    .main-content button.save,
+    .main-content button.delete{width: 112%; float: left;}
+    .main-content .my-icon{width: 2.6%; float: right; margin: -57.4% -1.5% 0 0;}
+    form input[class = "select-date-stategy1"] {margin-right: 0.2%;}
+    form input[class = "select-date-stategy"] {margin-left: -2%; margin-right: 2.2%;}
+    .status-table td.status-date input {width: 87%;}
+
+    .main-content2{width: 95.6%;}
+    .main-content2 .table-header{width: 97%;}
+    .main-content2 .table-header .header2{width: 54%;}
+    .main-content2 table button.table-icon {width: 2.5%;}
+
+    .main-content3 .serachcon {margin-bottom: 2%;}
+    .main-content3 .searchcontent {margin-left: -8.2%;}
+}
+
+.not{width: 1.4%; float: right; margin-top: 1.4%; margin-right: -3.6%; cursor: pointer;}
